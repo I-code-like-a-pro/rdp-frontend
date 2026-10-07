@@ -14,7 +14,7 @@ export default function NetworkDashboard() {
   const fetchDevices = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/scan')
+      const res = await fetch(' https://freezable-quickness-fall.ngrok-free.dev/api/scan')
       const data = await res.json();
       setDevices(data);
     } catch (err) {
