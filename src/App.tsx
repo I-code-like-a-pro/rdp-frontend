@@ -14,7 +14,12 @@ export default function NetworkDashboard() {
   const fetchDevices = async () => {
     setLoading(true);
     try {
-      const res = await fetch('https://freezable-quickness-fall.ngrok-free.dev/api/scan')
+     
+      const res = await fetch('https://freezable-quickness-fall.ngrok-free.devhttps://your-ngrok-url.ngrok-free.app/api/scan', {
+    headers: {
+        'ngrok-skip-browser-warning': 'true'
+    }
+});
       const data = await res.json();
       setDevices(data);
     } catch (err) {
